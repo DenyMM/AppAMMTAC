@@ -1,0 +1,31 @@
+ion-title, h1, p, ion-buttons {
+    text-align: center;
+}
+
+#pic {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+h1, h4, p{
+    color: #6e1017f2;
+}
+
+h1{
+    font-size: 30px; 
+}
+
+ion-input{
+    background-color: #883c4296;
+    color: #2c2728fd;
+    border-radius: 9px 9px 9px 9px;
+-moz-border-radius: 9px 9px 9px 9px;
+-webkit-border-radius: 9px 9px 9px 9px;
+border: 0px solid #000000;
+}
+
+.centerId{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
