@@ -1,5 +1,7 @@
 {
   "name": "AMMTAC",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

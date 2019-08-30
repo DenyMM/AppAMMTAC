@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+
 
 @Component({
   selector: 'app-contacto',
   templateUrl: './contacto.page.html',
   styleUrls: ['./contacto.page.scss'],
 })
-export class ContactoPage implements OnInit {
+export class ContactoPage  {
 
-  constructor() { }
+  constructor(private iab: InAppBrowser) { }
 
-  ngOnInit() {
+  fbAMMTAC (){
+    this.iab.create('https://www.facebook.com/ammtransfusional/', '_system');
   }
 
 }

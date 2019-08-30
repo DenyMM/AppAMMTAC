@@ -1,9 +1,23 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>donacion</ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="tabs/tab2"></ion-back-button>
+          </ion-buttons>
+      <ion-title>Donación</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+<ion-item id="bloodOne" routerLink="requisitos">
+    <h2>Requisitos Generales para Donar Sangre</h2>
+</ion-item>
+<ion-item id="bloodTwo" (click)="directorio()">
+    <h2>Directorio de Bancos de Sangre</h2>
+</ion-item>
+<ion-item id="bloodThree" (click)="altruista()">
+    <h2>Donación Altruista en México</h2>
+</ion-item>
+<ion-item id="bloodFour" (click)="video()">
+    <h2>Video: ¿Qué es la Sangre?</h2>
+</ion-item>
 </ion-content>

@@ -27,8 +27,28 @@ const routes: Routes = [
           },
           {
             path: 'eventos',
-            loadChildren: () =>
+            children: [
+              {
+                path: '',
+                loadChildren: () =>
               import('../pages/eventos/eventos.module').then(m => m.EventosPageModule)
+              },
+              {
+                path: 'congresos',
+                loadChildren: () =>
+              import('../subpages/congresos/congresos.module').then(m => m.CongresosPageModule)
+              },
+              {
+                path: 'sesiones',
+                loadChildren: () =>
+              import('../subpages/sesiones/sesiones.module').then(m => m.SesionesPageModule)
+              },
+              {
+                path: 'cursos',
+                loadChildren: () =>
+              import('../subpages/cursos/cursos.module').then(m => m.CursosPageModule)
+              }
+            ]
           },
           {
             path: 'acceso',
@@ -42,9 +62,24 @@ const routes: Routes = [
           },
           {
             path: 'donacion',
+            children: [
+              {
+            path: '',
             loadChildren: () =>
               import('../pages/donacion/donacion.module').then(m => m.DonacionPageModule)
-          },
+            },
+            {
+              path: 'requisitos',
+              loadChildren: () =>
+            import('../subpages/requisitos/requisitos.module').then(m => m.RequisitosPageModule)
+            },
+            {
+              path: 'directorio',
+              loadChildren: () =>
+            import('../subpages/directorio/directorio.module').then(m => m.DirectorioPageModule)
+            }
+          ]
+        },
           {
             path: 'asociacion',
             loadChildren: () =>

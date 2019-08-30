@@ -1,15 +1,27 @@
 import { Component, OnInit } from '@angular/core';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-donacion',
   templateUrl: './donacion.page.html',
   styleUrls: ['./donacion.page.scss'],
 })
-export class DonacionPage implements OnInit {
+export class DonacionPage {
 
-  constructor() { }
+  constructor(private iab: InAppBrowser) { }
 
-  ngOnInit() {
+  directorio() {
+    this.iab.create('http://www.ammtac.org/espanol/DirectorioBS.asp', '_system');
   }
+
+  altruista() {
+    this.iab.create('http://www.ammtac.org/espanol/page.asp?Accion=VerRegistro&fkPage=268&NombreABC=&BuscarfkPromocion=&BuscarEsNovedad=&BuscarEsRecomendacion=&Keywords=&NoPagina=', '_system');
+  }
+
+  video() {
+    this.iab.create('https://www.youtube.com/watch?v=X6WEMPTHHEc&feature=youtu.be', '_system');
+  }
+
+
 
 }

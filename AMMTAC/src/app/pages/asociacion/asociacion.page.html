@@ -1,9 +1,707 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>asociacion</ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="tabs/tab2"></ion-back-button>
+          </ion-buttons>
+      <ion-title>Asociación</ion-title>
+    </ion-toolbar>
 </ion-header>
+
 
 <ion-content>
 
+  <ion-item id="bloodOnei">
+        <ion-segment (ionChange)="segmentChanged()" [(ngModel)]="segment" >
+          <ion-segment-button value="0">
+              <ion-item id="bloodOne">
+                  <h2>Mesa Directiva</h2>
+              </ion-item>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-item>
+
+      <ion-item id="bloodTwoi">
+        <ion-segment (ionChange)="segmentChanged()" [(ngModel)]="segment" >          
+            <ion-segment-button value="1">
+                <ion-item id="bloodTwo">
+                    <h2>Misión y Visión</h2>
+                </ion-item>
+            </ion-segment-button>       
+          </ion-segment>
+        </ion-item>
+
+      <ion-item id="bloodThreei">
+        <ion-segment (ionChange)="segmentChanged()" [(ngModel)]="segment" >          
+            <ion-segment-button value="2">
+                <ion-item id="bloodThree">
+                    <h2>Reglamento</h2>
+                </ion-item>
+            </ion-segment-button>       
+          </ion-segment>
+        </ion-item>
+      
+      <ion-item id="bloodFouri">
+        <ion-segment (ionChange)="segmentChanged()" [(ngModel)]="segment" >          
+            <ion-segment-button value="3">
+                <ion-item id="bloodFour">
+                    <h2>Membresía</h2>
+                </ion-item>
+            </ion-segment-button>       
+          </ion-segment>
+        </ion-item>
+      
+    
+      <ion-slides #slides (ionSlideDidChange)="slideChanged()" scrollbar="true">
+        <ion-slide>
+          <ion-row>
+            <ion-col size="12">
+                <h3>ASOCIACIÓN MEXICANA DE MEDICINA TRANSFUSIONAL, A.C.</h3>
+                <h4>DIRECTORIO MESA DIRECTIVA 2018-2020</h4>
+                <br>
+                <h4>MIEMBROS HONORARIOS</h4>
+                <p>QFB. Elisa Quintanar García 
+                    <br>Dr. Héctor Rodríguez Moyado
+                    <br>Dra. Marcela Contreras</p> <br> <br>
+                <h4>PRESIDENTE</h4>
+                <p>LE. LUCIA ZAMUDIO GODINEZ</p> <br> <br>
+                <h4>SECRETARIA</h4>
+                <p>DRA. AMALIA GUADALUPE BRAVO LINDORO</p>  <br> <br>
+                <h4>TESORERO</h4>
+                <p>EBC. JULIO CÉSAR MARTÍNEZ ÁLVAREZ</p>  <br> <br><br>
+                <h4>VOCALES  DE ACTIVIDADES</h4> <br>
+                <h4>ADMISION</h4>
+                <p>QFB. SILVIA LAURA NÁJERA SÁNCHEZ</p><br><br>
+                <h4>CIENTÍFICAS, ACADÉMICAS Y EDITORIALES</h4>
+                <p>DR. ÁNGEL GUERRA MÁRQUEZ</p> <br><br>
+                <h4>APOYO</h4>
+                <p>DR. RAÚL PALOMINO MORALES
+                    <br>QFB. ROBERTO JALOMA AVENDAÑO</p><br><br><br>
+                <h4>COMITÉS</h4>  <br>
+                <h4>ENFERMERIA</h4>
+                <p>LE. MARGARITA TÉLLEZ MORALES</p>
+      
+            </ion-col>
+          </ion-row>
+          
+        </ion-slide>
+
+        <ion-slide>
+          <ion-row>
+            <ion-col size="12">
+              <ion-list>
+                <h4>Misión</h4> <br>
+                <p>La misión de la AMMTAC es propiciar la capacitación y actualización 
+                  continua del personal involucrado en la Medicina Transfusional por 
+                  medio de actividades educativas de alto nivel, consensos y foros de 
+                  discusión que permitan el intercambio de ideas, el desarrollo científico, 
+                  tecnológico y académico de sus asociados para poder elevar la seguridad 
+                  transfusional en México.</p>
+                <h4>Visión</h4> <br>
+                <p>La visión de la AMMTAC es ser en el mediano plazo una asociación líder 
+                  en el ámbito de la Medicina Transfusional con proyección Nacional e Internacional.</p>
+              </ion-list>
+            </ion-col>
+          </ion-row>
+        </ion-slide>
+        <ion-slide>
+            <ion-row>
+                <ion-col size="12">
+                  <ion-list>
+                    <h3>ASOCIACIÓN MEXICANA DE MEDICINA TRANSFUSIONAL A.C.
+                        REGLAMENTO</h3><br>
+                    <h4>DECLARACIÓN DE PRINCIPIOS</h4><br>
+                    <p>La Asociación Mexicana de Medicina Transfusional, A. C., (en lo sucesivo “AMMT”) 
+                      integrada por Médicos, Químicos, Enfermeras, Trabajadoras Sociales y demás 
+                      Profesionales de la Salud relacionados con la Medicina Transfusional, con título 
+                      reconocido por las autoridades competentes, manifiesta la necesidad de participar 
+                      y contribuir de manera constante para una mejor preparación, académica, científica, 
+                      técnica, cultural y social de todos sus Asociados. Lo anterior, con el fin de que 
+                      ejerzan su labor con el más elevado nivel científico, académico, técnico y 
+                      asistencial, dentro de un marco ético, como lo demanda el beneficio de la población 
+                      del País.</p> <br>
+                    <p>Concientes de que los profesionales de la Salud necesitan actualizar sus 
+                      conocimientos y técnicas de manera permanente, la Asociación Mexicana de Medicina 
+                      Transfusional, A.C., (AMMT, AC) tendrá como objetivo fundamental facilitar el 
+                      espacio idóneo para que sus agremiados reciban constantemente la mejor 
+                      actualización profesional mediante la realización de congresos nacionales e 
+                      internacionales, cursos, conferencias, seminarios y publicaciones y otros medios 
+                      adecuados para conseguir el objetivo antes enunciado.</p><br><br>
+                    <h4>CAPITULO I<br>
+                        DENOMINACIÓN, OBJETO, DURACIÓN Y DOMICILIO</h4><br><br>
+                    <p>Artículo 1.- La razón social de la asociación es “ASOCIACIÓN MEXICANA DE MEDICINA 
+                      TRANSFUSIONAL”, e irá seguida siempre de las palabras "ASOCIACION CIVIL", o 
+                      de sus iniciales "A.C.”.</p><br>
+                    <p>Artículo 2.- La AMMT tiene por objeto (referirse a los estatutos)</p><br><br>
+                    <h4>CAPITULO II<br>
+                        DE LOS SOCIOS, SUS DERECHOS, OBLIGACIONES Y CUOTAS.</h4><br><br>
+                    <p>Artículo 3.- La AMMT está integrada y formada por los profesionales de la salud 
+                      que la han constituido. Aquellos individuos que en el futuro soliciten su ingreso 
+                      serán admitidos con todos sus derechos y obligaciones siempre y cuando reúnan y 
+                      lleguen a cumplir con los requisitos establecidos en los estatutos y este reglamento</p><br>
+                    <p>Artículo4.- Habrá cuatro categorías de socios: Fundadores, Activos, Honorarios, y 
+                      Aspirantes.</p><br>
+                    <p>Artículo 5.- Son socios fundadores los que firmaron el Acta Constitutiva Notarial 
+                      y aquellos cuya solicitud de ingreso a la Asociación haya sido aprobada hasta el 
+                      día trece de diciembre de dos mil uno y cuyos nombres aparecen en el acta constitutiva 
+                      notarial.</p><br>
+                    <p>Artículo 6.- Son socios activos, los profesionales de la salud que cumplan con los 
+                      siguientes requisitos:</p>
+                    <p>a) Ser Profesional del Área de la Salud ó actividades afines de moralidad 
+                      reconocida y debidamente autorizado para ejercer.</p>
+                    <p>b) Presentar el diploma o constancia que certifique sus estudios.</p>
+                    <p>c) Entregar una solicitud de ingreso avalada por dos socios de la AMMT.</p>
+                    <p>d) Pagar oportunamente las cuotas de ingreso, ordinaria anual y las extraordinarias que 
+                      la Mesa Directiva determine.</p><br>
+                    <p>Artículo 7.- Son socios honorarios las personas que se hayan distinguido por prestar 
+                      servicios extraordinarios a la Medicina Transfusional en México o en otros países. 
+                      Tal distinción se otorgará a propuesta de cinco miembros activos, luego de ser aprobada 
+                      por la Mesa Directiva y ratificada por el Consejo Consultivo de la AMMT.</p><br>
+                    <p>Artículo 8.- Son socios aspirantes; los profesionales de la Salud en periodo de 
+                      entrenamiento o de formación y para ello requerirán:</p>
+                    <p>a) Título o constancia de realización de estudios y ejercer en área afín a la Medicina 
+                      Transfusional debidamente avalada por la Institución en donde llevan a cabo su formación.</p>
+                    <p>b) Presentar los documentos que certifiquen se halla en periodo de entrenamiento, 
+                      avalada por el Director; Jefatura de Enseñanza o Profesor titular del curso de la 
+                      institución.</p>
+                    <p>c) Esta categoría se otorgará únicamente mediante constancia en la que se señalará 
+                      el tiempo que durará la condición de socio aspirante</p>
+                    <p>d) En un lapso máximo de dos años después de terminar sus estudios en institución 
+                      avalada, deberá presentar el diploma o certificado correspondiente. En caso de no 
+                      cumplir con este requisito será dado de baja de la AMMT.</p><br>
+                    <p>Artículo 9.- Son derechos y obligaciones de los socios fundadores y activos:</p>
+                    <p>a) Concurrir a las sesiones ordinarias y extraordinarias a las que sea convocado.</p>
+                    <p>b) Desempeñar las comisiones que le fueran conferidas por la Mesa Directiva.</p>
+                    <p>c) Contribuir para los gastos de la Asociación mediante el pago de las cuotas de ingreso, 
+                      anuales y extraordinarias establecidas por la Mesa Directiva.</p>
+                    <p>d) Tener voz y voto en las discusiones y derecho a elegir y ser electo para los puestos 
+                      de la Mesa Directiva.</p>
+                    <p>e) Recibir sin costo alguno las publicaciones que realice la AMMT.</p>
+                    <p>f) Cumplir los acuerdos de Asamblea y de la Mesa Directiva.</p>
+                    <p>g) Acatar los estatutos y reglamentos para cumplir con las disposiciones emanadas de los mismos.</p>
+                    <p>h) Disfrutar de todos los derechos que le otorgan los estatutos y reglamentos de las 
+                      disposiciones legales correspondientes.</p><br>
+                    <p>Artículo 10.- Son derechos y obligaciones de los socios honorarios:</p>
+                    <p>a) Ser designados para los cargos de representación honorífica de la AMMT.</p>
+                    <p>b) Tener voz y voto en las reuniones de la AMMT.</p>
+                    <p>c) Recibir las publicaciones que la AMMT edite.</p>
+                    <p>d) No tendrán obligaciones pecuniarias, ni de ninguna otra índole con la Asociación.</p><br>
+                    <p>Artículo 11.- Son derechos y obligaciones de los socios aspirantes:</p>
+                    <p>a) Concurrir a las sesiones a que sea convocado.</p>
+                    <p>b) Desempeñar las comisiones que le fueran conferidas por la Mesa Directiva.</p>
+                    <p>c) Contribuir para los gastos de la Asociación con las cuotas anuales establecidas por la Mesa Directiva. 
+                      Estas serán en principio, equivalentes a la mitad del valor de la cuota anual que paguen los socios activos.</p>
+                    <p>d) Recibir sin costo alguno las publicaciones que realice la AMMT.</p>
+                    <p>e) Cumplir los acuerdos de la Asamblea y de la Mesa Directiva.</p>
+                    <p>f) Acatar los estatutos y reglamentos para cumplir con las disposiciones emanadas de ellos.</p>
+                    <p>g) Disfrutar de todos los derechos que le otorgan estos estatutos y las disposiciones 
+                      legales correspondientes.</p>
+                    <p>h) No tendrá derecho a voto en las decisiones, ni derecho a elegir o a ser elegido para 
+                      los puestos de la Mesa Directiva.</p>
+                    <p>i) Inmediatamente después de terminar sus estudios y una vez entregada al Comité de Admisión la 
+                      constancia correspondiente, podrán ser promovidos a socios titulares</p><br>
+                    <p>Artículo 12.- Se perderá el carácter de socio:</p>
+                    <p>a) Cuando se deje de pagar las cuotas ordinarias o extraordinarias.</p>
+                    <p>b) La baja o expulsión tendrá carácter definitivo cuando el socio en cuestión cometa falta 
+                      grave en contra de la moral en cualquiera de sus actividades, exista negligencia en el 
+                      cumplimiento de las obligaciones que la AMMT le haya asignado o se ejerzan acciones que 
+                      entorpezcan la buena marcha de sus funciones ( referirse a los estatutos). Lo anterior 
+                      será decidido por el Comité de Ética y tendrá efecto una vez se cuente con la aprobación 
+                      de la Mesa Directiva y el Consejo Consultivo.</p>
+                    <p>c) Cuando se utilice la AMMT, con fines ilícitos o de beneficio propio.</p>
+                    <p>d) Todas las categorías de socios estarán bajo la acción de este artículo.</p><br>
+                    <p>Artículo 13.- El socio expulsado en forma definitiva de la AMMT no tendrá derecho a la 
+                      devolución de cantidad alguna que haya pagado, ni podrá recuperar de ninguna forma sus 
+                      derechos como asociado y deberá reintegrar el diploma original de socio.</p><br>
+                    <p>Artículo 14.- Si la sanción obedece a falta de pago de cuotas, el socio no activo como 
+                      tal podrá recuperar sus derechos al cubrir íntegramente el importe de las mismas como 
+                      anualidades actualizadas.</p><br>
+                    <p>Artículo 15.- Otro tipo de sanciones aplicables a la generalidad de los miembros 
+                      afiliados o en su carácter de funcionarios de las diferentes Comisiones, 
+                      Mesa Directiva o Consejo Consultivo serán:</p><br>
+                    <p>a) Amonestación verbal.</p>
+                    <p>b) Extrañamiento.</p>
+                    <p>c) Suspensión temporal del derecho de asociado.</p>
+                    <p>d) Destitución del cargo, por negligencia en el cumplimiento de sus funciones.</p>
+                    <p>* La calidad de las sanciones mencionadas en el artículo 14 serán decididas 
+                      por el Comité de Etica y por la Mesa Directiva en funciones .</p><br><br>
+                      <h4>CAPITULO III<br>
+                          DE LA ASAMBLEA</h4><br><br>
+                    <p>Artículo 16.- La Asamblea Nacional de Asociados es el órgano supremo de la AMMT, la 
+                      Mesa Directiva podrá convocar a la celebración de asambleas Extraordinarias.</p><br>
+                    <p>Artículo 17.- La realización de Asambleas Nacionales o extraordinarias serán 
+                      convocadas por la Mesa Directiva con el orden del día y en el plazo que ésta fije. 
+                      Las asambleas serán convocadas, a elección de la Mesa Directiva, mediante publicación 
+                      en uno de los periódicos de mayor circulación a nivel nacional, en los medios de 
+                      comunicación, correo personal con acuse de recibo, correo certificado o mensajería 
+                      con acuse de recibo o en el boletín, con anticipación mínima de quince días naturales.</p><br>
+                    <p>Artículo 18.- La Asamblea Nacional se llevará a cabo cuando menos una vez al año con 
+                      en el Congreso Nacional o según lo decida la Asamblea, con excepción de la primera vez 
+                      y con el siguiente orden del día:</p>
+                    <p>a) Informe anual de la Mesa Directiva</p>
+                    <p>b) Elección de las comisiones y nombramientos que se consideren necesarios para la 
+                      buena marcha de las funciones de la AMMT.</p>
+                    <p>c) Asuntos generales.</p><br>
+                    <p>Artículo 19.- Son Asambleas Extraordinarias las que se lleven a cabo para tratar 
+                      asuntos relacionados con modificación de estatutos y reglamentos, en la disolución de 
+                      la sociedad o cambio de denominación de la misma. Para tal fin, deberá publicarse una 
+                      convocatoria en un periódico de circulación nacional o a través de los medios 
+                      electrónicos a la disposición de la Mesa Directiva, por lo menos quince días naturales 
+                      antes del evento.</p><br>
+                    <p>Artículo 20.- Para que la Asamblea extraordinaria se pueda llevar a cabo será necesario:</p><br>
+                    <p>a) Quórum de más del 50 por ciento de los socios con derecho a voto. Par tal fin, el 
+                      secretario de la Mesa Directiva deberá tener una lista actualizada de los socios con 
+                      derecho a voto y copia de los estatutos y reglamentos vigentes.</p>
+                    <p>b) En caso de no estar presente este quórum mínimo, se citará para una segunda sesión a realizar 
+                      treinta minutos más tarde, con el número de socios que se hallen presentes.</p>
+                    <p>c) Para que una propuesta sea aprobada en la Asamblea Nacional, bastará la mayoría de votos. 
+                      En las Asambleas extraordinarias será necesaria la votación favorable del 
+                      75 % de los socios presentes.</p>
+                    <p>Las Asambleas serán presididas por el Presidente y en su ausencia, por el Vicepresidente, 
+                      o por la persona que designen los presentes y serán conducidas por el Secretario. Antes de 
+                      su inicio el Presidente designará dos escrutadores para certificar el número de asistentes.</p>
+                    <p>Artículo 22.- Cuando no pudieran tratarse todos los asuntos comprendidos en el orden del 
+                      día en la fecha para la cual fue convocada la Asamblea a la cual hace referencia el 
+                      artículo 20, ésta podría continuarse en la fecha y hora que se acuerde, sin necesidad 
+                      de nueva convocatoria.</p><br>
+                    <p>Artículo 23.- En toda Asamblea con el carácter mencionado en el artículo 18, se 
+                      levantará un acta y se integrará un expediente con una copia de esta, un ejemplar 
+                      de la convocatoria, la lista de asistencia con las firmas correspondientes, los 
+                      informes y demás documentos de los cuales se dio cuenta en la sesión. Todo ello 
+                      deberá ser protocolizado ante notario público.</p><br>
+                    <p>Artículo 24.- Las votaciones se harán en el momento oportuno a juicio del Presidente 
+                      o a petición de un socio con aprobación de la asamblea:</p><br>
+                    <p>a) Para elegir al Vicepresidente en caso de que exista más de un candidato 
+                      autorizado por el Consejo Consultivo, la votación será personal y secreta por los 
+                      socios presentes en la Asamblea, o que envíen su voto por correo en formato ex profeso 
+                      para este fin emitido por la AMMT.</p>
+                    <p>b) La votación de cualquier otro asunto, será abierta o cerrada a juicio del Presidente.</p><br>
+                    <p>Artículo 25.- Para tener derecho a votar, el socio deberá estar al corriente en el pago 
+                      de sus cuotas, con todos sus derechos vigentes. Lo anterior podrá ser constatado 
+                      por el secretario en turno por los medios a su alcance en el archivo de la AMMT y 
+                      podrá consignarlo mediante el otorgamiento de la credencial de socio.</p><br><br>
+                    <h4>CAPITULO IV<br>
+                        DE LA ADMINISTRACIÓN</h4><br><br>
+                    <p>Artículo 26.- La AMMT será dirigida por la Mesa Directiva electa y designada para un 
+                      período de dos años. Sus miembros permanecerán en funciones hasta que se designen sus 
+                      sucesores y estos tomen posesión de sus cargos, tal como lo indica el artículo 41.</p><br>
+                    <p>La Mesa Directiva estará integrada por:</p>
+                    <p>Un Presidente</p>
+                    <p>Un Vicepresidente</p>
+                    <p>Un Secretario</p>
+                    <p>Un Tesorero</p>
+                    <p>Un Vocal de Actividades Científicas</p>
+                    <p>Un Vocal de Actividades Académicas</p>
+                    <p>Un Vocal de Admisión</p>
+                    <p>Un Vocal de Actividades Editoriales y de Comunicación Social</p>
+                    <p>Un Vocal, que podrá pertenecer a la sede del próximo Congreso Nacional</p>
+                    <p>Vocales de Apoyo según lo decida la Mesa Directiva</p><br>
+                    <p>Artículo 27.- La Mesa Directiva de la AMMT se obliga a la organización y ejecución de 
+                      las sesiones académicas mensuales y un Congreso Nacional que reúna a todos o la mayoría 
+                      de sus asociados una vez al año. La Mesa Directiva propiciará reuniones regionales y 
+                      dará apoyo científico, técnico y administrativo para las diversas actividades académicas 
+                      que se le soliciten en el área de la Salud. La mesa directiva se obliga a no dejar más 
+                      allá de su gestión a la mesa directiva siguiente adeudos, ni compromisos financieros a 
+                      excepción de línea telefónica y renta de local que deberá hacerse por el mínimo de 
+                      tiempo ofertado</p><br>
+                    <p>Artículo 28.- Son Facultades de la Mesa Directiva:</p>
+                    <p>a) Celebrar juntas de acuerdo con el reglamento correspondiente.</p>
+                    <p>b) Discutir y resolver los problemas que sean puestos a consideración por el Presidente 
+                      o alguno de los miembros de la Mesa Directiva o de los socios de la AMMT.</p>
+                    <p>c) Nombrar los comités y vocales de apoyo que considere pertinentes.</p>
+                    <p>d) Referirse a los estatutos y reglamento para ver facultades y atribuciones de la Mesa Directiva.</p><br>
+                    <p>Artículo 29.- Existirá un Consejo Consultivo formado por los Ex-Presidentes, Miembros 
+                      Honorarios, Integrantes de la Mesa Directiva Fundadora y Miembros fundadores que hallan 
+                      participado activamente en el Comité de Medicina Transfusional de la Agrupación Mexicana 
+                      para el estudio de la Hematología , durante el año 2001. Su carácter será de autoridad 
+                      moral y de asesoría para la Mesa Directiva. Dicho Consejo Consultivo será presidido por 
+                      el Presidente en funciones de la AMMT y asistirá como invitado especial el Vicepresidente 
+                      también en funciones. Las reuniones del Consejo Consultivo serán convocadas por el 
+                      presidente de la AMMT, cualquiera de los miembros del Consejo Consultivo o del Comité 
+                      de Etica de la AMMT y se realizarán con el número de miembros que concurran. Para que 
+                      sus decisiones tengan validez deberán contar con la aprobación de la mayoría o por unanimidad.</p>
+                    <p>Los integrantes del Consejo consultivo serán los siguientes:</p>
+                    <p>Dra. Adolfina Bergés García</p>
+                    <p>Dr. Raúl Ambriz Fernández</p>
+                    <p>Dr. Héctor Rodríguez Moyado</p>
+                    <p>Dra. Amalia Guadalupe Bravo Lindoro</p>
+                    <p>Dra. Ana Luisa D’Artote González</p>
+                    <p>Dra. Araceli Malagón Martínez</p>
+                    <p>Dr. Sergio García Méndez</p>
+                    <p>Dra. Doris Lordméndez Jácome</p>
+                    <p>Dr. José Antonio Luis López</p>
+                    <p>Dra. Malva Hilda Mejia Arregui</p>
+                    <p>Dra. Norma Patricia Reyes Brito</p>
+                    <p>Dr. Daniel Romero López</p>
+                    <p>Dra. María Georgina Zapata Menchaca</p>
+                    <p>QFB Elisa Quintanar García</p>
+                    <p>Dra. Ana María Mejía Domínguez</p>
+                    <p>Dr. Jorge Eduardo Pérez Osorio</p>
+                    <p>Dr. Enrique Gómez Morales.</p>
+                    <p>Dr. Julio Selvas Pallares</p>
+                    <p>Dra. María Cristina Vázquez Peláez</p>
+                    <p>Dr. Alfredo Radillo González</p><br><br>
+                    <h4>CAPITULO V<br>
+                      DEL PRESIDENTE: FACULTADES Y OBLIGACIONES</h4><br><br>
+                    <p>Artículo 30.- Son facultades del Presidente:</p>
+                    <p>a) Escoger entre los miembros de la Asociación, a dos de ellos para que actúen como 
+                      secretario y como tesorero de la Mesa Directiva cuya propuesta deberá ser ratificada 
+                      por los socios asistentes a la Asamblea Nacional. El Vicepresidente, como ya se 
+                      mencionó, deberá ser electo por la Asamblea</p>
+                    <p>b) Como representante legal de la Mesa Directiva tiene todas las facultades que 
+                      señala en los estatutos y el reglamento, las cuales podrán ser modificadas o limitadas 
+                      por la Asamblea Nacional de Asociados.</p>
+                    <p>c) Aprobar y firmar la documentación fiscal.</p>
+                    <p>d) Recibir de la empresa que realiza auditoria externa de la AMMT, el informe 
+                      certificado del estado financiero de la Asociación , al término del periodo inmediato 
+                      anterior de gestión ( a más tardar a los tres meses ) de la mesa directiva correspondiente.</p>
+                    <p>e) En unión del Secretario, firmar la documentación administrativa de la Asociación.</p>
+                    <p>f) Presidir y encauzar las sesiones.</p>
+                    <p>g) Presidir el Consejo Consultivo.</p>
+                    <p>h) Nombrar las comisiones que él o la Mesa Directiva en conjunto, consideren 
+                      necesarias para el despacho de algún asunto, el estudio de trabajos o para conferirles 
+                      la representación de la Asociación en actos científicos, académicos y sociales.</p>
+                    <p>i) Supervisar lo estipulado en el artículo 24 y organizar el calendario de las 
+                      sesiones y reuniones de la Asociación</p>
+                    <p>j) Convocar Asambleas.</p>
+                    <p>k) Nombrar escrutadores.</p>
+                    <p>l) Estudiar y resolver los problemas individuales que le sean presentados por los socios.</p>
+                    <p>m) Fomentar las relaciones con otras corporaciones científicas mexicanas o extranjeras.</p><br>
+                    <p>Artículo 31.- Son obligaciones del Presidente:</p>
+                    <p>a) Cumplir y hacer cumplir los presentes estatutos y los reglamentos y acuerdos 
+                      de la Asamblea y la Mesa Directiva.</p>
+                    <p>b) Velar firme y tesoneramente por el progreso y engrandecimiento de la AMMT.</p>
+                    <p>c) Rendir un informe anual a la Asamblea Nacional, incluyendo estados financieros.</p>
+                    <p>d) En unión del Tesorero, aprobar los gastos de la Asociación menores por montos 
+                      de 205 salarios diarios mínimos vigentes en zona A que no serán aplicables a pagos 
+                      parciales de gastos mayores y en unión del tesorero, secretario y vicepresidente aprobar 
+                      los gastos con montos mayores de 205 salarios diarios mínimos vigentes en zona A o 
+                      contratación de servicios por tiempos mayores a un año. gastos.</p>
+                    <p>e) Presentar el presupuesto anual en su toma de posesión y a mas tardar en la 3er reunión mensual.</p>
+                    <p>f) Lograr que al final de su gestión, la nueva Mesa Directiva de la AMMT reciba una 
+                      cantidad de dinero adecuada ( por lo menos el 80% de los fondos que resulten de la última 
+                      auditoría y/o balance) para el inicio de sus funciones. Dicha cantidad deberá ser 
+                      certificada por asesores externos en ateria administrativa o contable contratados 
+                      por la Mesa Directiva en funciones.</p>
+                    <p>g) Velar para que el fondo económico de la AMMT se utilice para beneficio estricto 
+                      de la misma y de todos sus agremiados sin incurrir en gastos innecesarios y estableciendo 
+                      el nivel de gastos de la Mesa Directiva.</p>
+                    <p>h) Citar al Consejo Consultivo de ser factible cada seis meses o mínimo una vez 
+                      durante su gestión a una reunión conjunta con la Mesa Directiva que tendrá carácter 
+                      informativo general y de presentación de los estados financieros, incluyendo inversiones.</p>
+                    <p>i) Acatar las indicaciones del Consejo Consultivo para la buena marcha de la Asociación.</p>
+                    <p>j) Hacer cumplir en toda ceremonia oficial de la Asociación, los protocolos incluidos en el Reglamento.</p>
+                    <p>k) Presentar presupuestos y en su caso aprobarlos con el visto bueno de la Mesa Directiva y de los 
+                      asesores financieros externos designados por la propia Mesa Directiva</p><br>
+                    <p>Artículo 32.- Los ordenamientos de la Asamblea son responsabilidad expresa del Presidente en funciones. 
+                      La falta de cumplimiento de tales obligaciones y compromisos podrá sancionarse, a 
+                      juicio del Comité de Ética, con efectos que pueden ir desde la amonestación, hasta 
+                      la destitución del cargo según la gravedad de la omisión o acto</p><br><br>
+                    <h4>CAPITULO VI<br>
+                        DEL VICEPRESIDENTE: FACULTADES Y OBLIGACIONES</h4><br><br>
+                    <p>Artículo 33.- Para ocupar la Vicepresidencia de la Asociación Mexicana de Medicina 
+                      Transfusional A.C., se requerirá:</p>
+                    <p>a) Ser mexicano por nacimiento o naturalización.</p>
+                    <p>b) Ser profesional de la Salud con título registrado ante las autoridades correspondientes.</p>
+                    <p>c) Tener un mínimo de cinco años ininterrumpidos como socio titular de la AMMT ( no 
+                      aplica en los primeros cinco años de la Asociación )</p>
+                    <p>d) Haberse distinguido en la comunidad médica por su alta calidad moral, méritos asistenciales, 
+                      científicos, de investigación, docencia y otras actividades profesionales.</p>
+                    <p>e) Estar activo en el área de la Medicina Transfusional en institución de prestigio 
+                      reconocido, pública o privada y desempeñar o haber desempeñado una o más de las siguientes 
+                      actividades: administrativas, asistenciales, docentes o de investigación.</p>
+                    <p>f) Asistir con regularidad a las sesiones y congresos de la AMMT y participar con entusiasmo 
+                      en las comisiones y actividades que la Mesa Directiva le asigne.</p>
+                    <p>g) Manifestar por escrito o ser propuesto por cualquiera de los miembros ( y asumir el 
+                      compromiso) a la Mesa Directiva de la AMMT, su deseo de ser considerado candidato a la 
+                      Vicepresidencia exponiendo para ello, por escrito, su plan de trabajo. Esta solicitud 
+                      deberá presentarse por lo menos cuatro meses antes de la fecha en que espera ser electo. 
+                      La Mesa Directiva convocará al Consejo Consultivo para la aprobación o rechazo de la 
+                      misma (excepto la elección inaugural).</p>
+                    <p>h) Aprobada la solicitud, si no existe impugnación fundada hecha llegar a la Mesa 
+                      Directiva y al Consejo Consultivo por escrito y en secreto, el candidato a Vicepresidente 
+                      quedará autorizado para realizar campaña de proselitismo entre los miembros de la AMMT.</p>
+                    <p>i) La Mesa Directiva en funciones, enviará a los socios de la AMMT, el 
+                      curriculum resumido de los candidatos.</p>
+                    <p>j) Los socios contestarán en una boleta foliada su voto secreto para el Candidato a 
+                      Vicepresidente. Este deberá ser electo por mayoría de votos de los socios de la AMMT, 
+                      las boletas permanecerán selladas hasta el momento de la votación en la Asamblea Nacional.</p>
+                    <p>k) En caso de ser rechazada su solicitud por el Consejo Consultivo, se le informará por 
+                      escrito la causa o causas de dicha negativa. El interesado, puede volver a presentar su 
+                      solicitud para ser candidato a la Vicepresidencia una vez que haya desaparecido el los 
+                      inconvenientes que originaron el rechazo inicial.</p><br>
+                    <p>Artículo 34.- Corresponde al Vicepresidente:</p>
+                    <p>a) Suplir las faltas transitorias, temporales o definitivas del Presidente, según el artículo 30</p>
+                    <p>b) Concurrir a las sesiones de la Mesa Directiva y tomar parte activa en las 
+                      deliberaciones y trabajos de la misma.</p>
+                    <p>c) Tomar posesión de la Presidencia de la AMMT en la Asamblea Nacional durante 
+                      la sesión de negocios del Congreso Nacional.</p>
+                    <p>d) Recibir de la mesa directiva saliente los documentos pertinentes correspondientes 
+                      a su administración y los fondos económicos necesarios para organizar y promover el 
+                      evento científico nacional del año siguiente en que tomará posesión como Presidente.</p>
+                    <p>e) Presentar un plan de trabajo con respecto a las agrupaciones estatales correspondientes 
+                      o afiliadas a la Asociación</p>
+                    <p>f) Coordinar las actividades de las sociedades filiales en toda la República.</p>
+                    <p>g) Definir el sitio en donde se realizará cada Congreso Nacional durante su gestión como 
+                      presidente con toda oportunidad. La aprobación de las sedes deberá ser hecha por la Asamblea 
+                      Nacional y para su realización, contará con el apoyo de un Comité Local constituido por los 
+                      socios y allegados de estos en la sede designada y que estén interesados en el desarrollo de 
+                      las actividades de la AMMT.</p>
+                    <p>h) Contando con las facilidades mencionadas, el programa definitivo del Congreso de actividades del 
+                      académicas, científicas, culturales y sociales correspondiente y los participantes en cada una de ellas 
+                      debe quedar definido por lo menos dos meses antes de la realización del Congreso Nacional.</p><br><br>
+                    <h4>CAPITULO VII<br>
+                        DEL SECRETARIO: FACULTADES Y OBLIGACIONES</h4><br><br>
+                    <p>Artículo 35.- El Secretario de la Mesa Directiva de la AMMT tendrá las siguientes facultades:</p>
+                    <p>a) Asistir como mínimo en un 95 % a las Asambleas y sesiones de la Mesa Directiva y en unión del Presidente, 
+                      firmar la documentación administrativa de la Asociación.</p>
+                    <p>b) Convocar y elaborar la orden del día, de acuerdo con el Presidente, en toda clase de sesiones y transmitir 
+                      a los socios los acuerdos del Presidente, de la Mesa Directiva o de la Asamblea.</p>
+                    <p>c) Registrar las votaciones, hacer el listado de los socios presentes en las sesiones.</p>
+                    <p>d) Levantar actas de las Juntas de la Mesa Directiva y Asambleas de la AMMT y actos oficiales que se celebre, 
+                      debiéndolas someter a su aprobación en las siguientes reuniones,. y aprobadas por los asistentes, quedarán 
+                      legalizadas con la firma del Presidente y asentadas en los libros correspondientes.</p>
+                    <p>e) Llevar y conservar los libros de actas, el archivo general de la AMMT, los libros de registro o por medios 
+                      electrónicos, recibir y hacerse cargo de la correspondencia de la AMMT de acuerdo con el Presidente.</p>
+                    <p>f) Exponer los programas de trabajo en la Asamblea Nacional o en Sesión Ordinaria designada para tal fin.</p>
+                    <p>g) Preparar un informe de las labores de la AMMT y de la Mesa Directiva durante su gestión a fin de que pueda 
+                      ser utilizada por el Presidente para su informe ante la Asamblea Nacional.</p>
+                    <p>h) Hacer entrega a su sucesor mediante acta que se levante al efecto.</p>
+                    <p>i) Supervisar las labores administrativas y de gastos de la AMMT.</p>
+                    <p>j) Designar o remover a los empleados de la Asociación.</p>
+                    <p>k) Fijar los gastos de los empleados que hayan sido aprobados por la propia Asociación</p>
+                    <p>l) Mantener y fomentar, de acuerdo con el Presidente y el Vicepresidente, relaciones con otras corporaciones 
+                      científicas mexicanas y extranjeras.</p>
+                    <p>m) Los vocales, de acuerdo al orden en que están señalados en el artículo 26, tendrán funciones de ayuda 
+                      al Secretario y deberán suplirlo en su ausencia en forma temporal o definitiva, fungiendo como Secretario de Actas.</p>
+                    <p>n) Todos los derechos y obligaciones señalados en los estatutos y reglamento de acuerdo con el Presidente.</p><br><br>
+                    <h4>CAPITULO VIII<br>
+                        DEL TESORERO: FACULTADES Y OBLIGACIONES</h4><br><br>
+                    <p>Artículo 36.- El tesorero de la Mesa Directiva tendrá las siguientes facultades:</p>
+                    <p>a) Asistir como mínimo en un 80 % a las Asambleas y sesiones de la Mesa Directiva y en unión del Presidente, 
+                      firmar la documentación correspondiente de la Asociación.</p>
+                    <p>b) Llevar y supervisar en forma adecuada la contabilidad de la Asociación con la asesoría de un contador público.</p>
+                    <p>c) Proponer a la Mesa Directiva la designación o el cambio del personal necesario para el manejo de los asuntos contables de la AMMT.</p>
+                    <p>d) Autorizar y efectuar el pago de la nómina de empleados de la AMMT, así como de gastos menores que tuvieran que realizarse.</p>
+                    <p>e) Firmar en unión del Presidente la documentación referente a recibos y gastos de los fondos.</p>
+                    <p>f) Recaudar las cuotas ordinarias y extraordinarias de los socios.</p>
+                    <p>g) Vigilar el movimiento contable de las publicaciones de la AMMT, solicitando y recibiendo cuentas de los administradores.</p>
+                    <p>h) Tener la representación bancaria con el sistema de dos firmas (Presidente, Tesorero)</p>
+                    <p>i) Presentar un informe bimensual del estado contable en la sesión mensual ordinaria y un balance anual. Al finalizar su gestión, 
+                      entregar un informe y balance que exprese el estado económico de la Asociación.</p>
+                    <p>j) Llevar la representación de la Asociación en todos los asuntos relacionados con las finanzas de la misma.</p>
+                    <p>k) Encargarse de acrecentar los fondos y bienes que sean necesarios para la realización de los objetivos de la Asociación.</p>
+                    <p>l) Los vocales tendrán funciones de apoyo al Tesorero y deberán suplirlo si falta en forma temporal ó definitiva. 
+                      De acuerdo al orden señalado en el artículo 26.</p>
+                    <p>m) Todos los derechos y obligaciones señalados en los estatutos y el reglamento.</p><br><br>
+                    <h4>CAPITULO IX<br>
+                        DE LOS VOCALES: FACULTADES Y OBLIGACIONES</h4><br><br>
+                    <p>Artículo 37.- Corresponde a los Vocales:</p>
+                    <p>a) Ser nombrados por la Asamblea Nacional de Socios, a menos que alguno de ellos haya sido designado 
+                      por el Presidente, para desempeñar tales cargos y formar parte de las comisiones.</p>
+                    <p>b) Suplir las ausencias temporales del Vicepresidente, del Secretario y del Tesorero.</p>
+                    <p>c) La Mesa Directiva podrá conferir a los vocales puestos representativos en comités y cargos de la AMMT.</p>
+                    <p>d) Vocalía de admisión.</p>
+                    <p>Responsabilidades</p>
+                    <p>1. Mantener actualizada y ordenada la base de datos de los socios, de preferencia en papel y medios electrónicos disponibles.
+                      <br>2. Promover el incremento de socios activos.
+                      <br>3. Asistir como mínimo a un 95% de los eventos y reuniones de la Asociación.
+                      <br>4. Cumplir con todo lo establecido en los artículos 37 y 38 de los estatutos.
+                      <br>5. En caso de no cumplir con las tareas encomendadas y a juicio de la mesa directiva, será destituido del cargo.
+                    </p>
+                    <p>e) Vocalía de actividades científicas.</p>
+                    <p>Responsabilidades</p>
+                    <p>1. Promover la participación activa de los miembros de la comunidad de la Medicina Transfusional en la elaboración y publicación de trabajos científicos.
+                      <br>2. Reunir y organizar revisiones de trabajos científicos, dentro y fuera de los congresos.
+                      <br>3. Organizar la recepción y evaluación de trabajos libres dentro y fuera de los congresos.
+                      <br>4. Asistir como mínimo a un 95% de los eventos y reuniones de la Asociación
+                      <br>5. Cumplir con todo lo establecido en los artículos 37 y 38 de los estatutos
+                      <br>6. En caso de no cumplir con las tareas encomendadas y a juicio de la mesa directiva, será destituido del cargo.
+                    </p>
+                    <p>f) Vocalía de comunicación.</p>
+                    <p>Responsabilidades</p>
+                    <p>1. Mantener actualizada la información que debe distribuirse tanto a los socios activos como a la comunidad de la Medicina Transfusional a 
+                      través de medios electrónicos y no electrónicos al alcance 
+                      <br>2. Enriquecer la información de la página Web de la Asociación colocando tanto información, como enlaces de interés para la Medicina Transfusional.
+                      <br>3. Asistir como mínimo a un 95% de los eventos y reuniones de la Asociación.
+                      <br>4. Cumplir con todo lo establecido en los artículos 37 y 38 de los estatutos.
+                      <br>5. En caso de no cumplir con las tareas encomendadas y a juicio de la mesa directiva, será destituido del cargo.
+                    </p>
+                    <p>g) Vocalía de actividades académicas.</p>
+                    <p>Responsabilidades</p>
+                    <p>1. Organizar las sesiones académicas mensuales.
+                      <br>2. Organizar los programas académicos de los eventos académicos que organice la mesa directiva (congresos, cursos, talleres, diplomados, etc.)
+                      <br>3. Asistir como mínimo a un 95% de los eventos y reuniones de la Asociación.
+                      <br>4. Aumplir con todo lo establecido en los artículos 37 y 38 de los estatutos
+                      <br>5. En caso de no cumplir con las tareas encomendadas y a juicio de la mesa directiva, será destituido del cargo.
+                    </p>
+                    <p>h) Vocalía de actividades editoriales.</p>
+                    <p>Responsabilidades</p>
+                    <p>1. Promover y organizar la publicación de material científico de interés para la comunidad de la Medicina Transfusional.
+                      <br>2. Asistir como mínimo a un 95% de los eventos y reuniones de la Asociación.
+                      <br>3. Cumplir con todo lo establecido en los artículos 37 y 38 de los estatutos.
+                      <br>4. En caso de no cumplir con las tareas encomendadas y a juicio de la mesa directiva, será destiuido del cargo.
+                    </p>
+                    <p>i) Comité de trabajo social.</p>
+                    <p>Responsabilidades</p>
+                    <p>1. Establecer contacto con las personas que laboran en ésta área de la Medicina Transfusional
+                      <br>2. Organizar y promover, en concordancia con la Vocalía de Actividades Académicas, cursos que contribuyan a la sensibilización y 
+                      capacitación del personal que labora en las áreas de Medicina Transfusional.
+                      <br>3. Asistir como mínimo a un 95% de los eventos y reuniones de la Asociación.
+                      <br>4. Cumplir con todo lo establecido en los artículos 37 y 38 de los estatutos.
+                      <br>5. En caso de no cumplir con las tareas encomendadas y a juicio de la mesa directiva, será destituido del cargo.
+                    </p>
+                    <p>j) Comité de enfermería.</p>
+                    <p>Responsabilidades</p>
+                    <p>1. Establecer contacto con las personas que laboran en ésta área de la Medicina Transfusional
+                      <br>2. Organizar y promover, en concordancia con la Vocalía de Actividades Académicas, cursos que contribuyan a la 
+                      sensibilización  y capacitación del personal que labora en las áreas de Medicina Transfusional.
+                      <br>3. Asistir como mínimo a un 95% de los eventos y reuniones de la Asociación.
+                      <br>4. Cumplir con todo lo establecido en los artículos 37 y 38 de los estatutos.
+                      <br>5. En caso de no cumplir con las tareas encomendadas y a juicio de la mesa directiva, será destituido del cargo
+                      </p><br>
+                    <p>Artículo 38.- Los vocales tienen el derecho de tomar parte activa en las deliberaciones y debates de la Mesa Directiva a 
+                      efecto de coordinar programas y actividades en beneficio de la Asociación.</p><br>
+                    <p>Artículo 39.- Corresponde a los Vocales Regionales:</p>
+                    <p>a) Ser nombrados por el Presidente de la AMMT para desempeñar el cargo. Representarán diversas regiones de la República Mexicana.</p>
+                    <p>b) Podrán representar en la región correspondiente al Presidente ó a otros miembros de la Mesa Directiva de la Asociación como Capítulos 
+                      Estatales , cuando éstos no puedan acudir a cualquier evento ó reunión.</p>
+                    <p>c) Representar a los socios y a las sociedades incorporadas en su región en las reuniones y Asambleas que se realicen 
+                      conjuntamente con la Mesa Directiva de la AMMT.</p>
+                    <p>d) Promover eventos científicos y publicaciones en su región, gestionando el patrocinio necesario en coordinación con las Mesas 
+                      Directivas de las sociedades incorporadas y correspondientes.</p>
+                    <p>e) Proponer a la Directiva de la AMMT la realización de estudios e investigaciones que contribuyan al progreso de la especialidad 
+                      a nivel nacional o para el beneficio de la población en su región.</p>
+                    <p>f) Fomentar las relaciones con instituciones académicas de su región o de otras localidades nacionales o extranjeras.</p>
+                    <p>g) Informar a la Mesa Directiva de la AMMT, acerca de la realización de programas académicos u otro tipo de eventos 
+                      científicos en su región en el marco de las políticas de la Asociación.</p>
+                    <p>h) Vigilar el cumplimiento de los estatutos y reglamentos de las sociedades incorporadas en su región.</p>
+                    <p>i) Promover la organización de sociedades incorporadas en aquellos estados en que no existan.</p>
+                    <p>j) La coordinación de estas actividades corresponde al Vicepresidente de la AMMT por lo que este, deberá reunirse con los 
+                      Vocales Regionales por lo menos una vez al año, alternando el lugar de la reunión regional y con la Mesa 
+                      Directiva en su conjunto cuando está lo indique.</p>
+                    <p>k) Solicitar los informes a las Mesas Directivas de las sociedades incorporadas y enviarlos a la AMMT. 
+                      Mantener con ellas la correspondencia al corriente.</p>
+                    <p>l) Mantener informada a la Mesa Directiva de la AMMT acerca de los problemas de los socios y de las sociedades 
+                      incorporadas, de su resolución ó la proposición de alternativas para ello.</p>
+                    <p>m) Auxiliar al Vicepresidente y al resto de la Mesa Directiva de la AMMT en la planeación, organización, 
+                      difusión y realización de sesiones, cursos y reuniones regionales y Congresos Nacionales.</p>
+                    <p>n) Llevar un registro actualizado de los socios y de las sociedades incorporadas en su región y vigilar que 
+                      los socios estén al corriente en el pago de sus cuotas a la AMMT.</p>
+                    <p>o) Rendir un informe anual de sus actividades y programas a seguir. Lo anterior deberá hacerse por escrito a 
+                      la Mesa Directiva de la AMMT en coordinación con el Vicepresidente.</p>
+                    <p>p) Entregar al Vocal Regional que le suceda en sus funciones, toda la documentación que tenga en su poder.</p><br><br>
+                    <h4>CAPITULO X<br>
+                        DE LAS ELECCIONES</h4><br><br>
+                    <p>Artículo 40.- La Mesa Directiva se renovará cada dos años, el presidente entrante deberá demostrar 
+                      su competencia, honorabilidad y trayectoria conforme a los artículos 33 y 52 de los estatutos vigentes. 
+                      Se autorizará su candidatura independientemente de su profesión, especialidad o subespecialidad en el área 
+                      de la medicina transfusional. El Presidente saliente no podrá ser reelegido.</p><br>
+                    <p>Artículo 41.- La Mesa Directiva en funciones convocará a elecciones para la vicepresidencia por correo o 
+                      por medios electrónicos, una vez que los candidatos cumplan con la revisión del Consejo Consultivo se hará 
+                      del conocimiento de los socios los candidatos y se enviará anexa una boleta para el voto con carácter secreto 
+                      que será recibido con fecha límite preestablecida .La votación final se hace en la asamblea, se hace votación 
+                      secreta de los asistentes que no hayan enviado su voto. Se abren los votos enviados y los emitidos en la 
+                      Asamblea, y hace el cómputo por los escrutadores, de inmediato la toma de posesión de la nueva Mesa Directiva 
+                      bajo protesta ante el Presidente saliente y el decano del Consejo Consultivo presente. La entrega administrativa 
+                      se llevará a cabo dentro los 60 días hábiles después de la toma de posesión. Para que lo anterior ocurra en el 
+                      tiempo establecido se deberá realizar el tramite ante notario del acta de la asamblea general a la que se refiere 
+                      este articulo máximo 15 días hábiles después de que haya tenido lugar.</p><br>
+                    <p>Artículo 42.- A la sesión de negocios sólo podrán concurrir los asociados que reúnan los requisitos de los artículo 9 y 10.</p><br>
+                    <p>Artículo 43.- Antes de iniciar la sesión de negocios, el Presidente nombrará dos escrutadores que no sean miembros de 
+                      la Mesa Directiva, los cuales harán el conteo en cada una de las votaciones.</p><br>
+                    <p>Artículo 44.- En caso de existir un solo candidato a la Vicepresidencia, la elección será registrada por Unanimidad.</p><br>
+                    <p>Artículo 45.- Cuando se presente más de un candidato aprobado y el Consejo Consultivo para el puesto de Vicepresidente, 
+                      la elección se hará por votación personal y secreta de acuerdo con el artículo 39. Será ganador el candidato que obtenga mayor número de votos.</p><br>
+                    <p>Artículo 46.- En caso de votación empatada, está se repetirá en la sesión de negocios, hasta tener un ganador por mayoría.</p><br><br>
+                    <h4>CAPITULO XI<br>
+                        DEL CONSEJO CONSULTIVO</h4><br><br>
+                    <p>Artículo 47.- El Consejo Consultivo estará formado por Ex-Presidentes, Miembros Honorarios, integrantes de 
+                      la Mesa Directiva Fundadora y Miembros fundadores de la AMMT, ó que hallan participado activamente en el Comité 
+                      de Medicina Transfusional de la Agrupación Mexicana para el estudio de la Hematología , durante el año 2001.</p><br>
+                    <p>Artículo 48.- Las sesiones del Consejo Consultivo serán encabezadas por el Presidente en funciones.</p><br>
+                    <p>Artículo 49.- En cada sesión todos los miembros del Consejo Consultivo tendrán voz y voto.</p><br>
+                    <p>Artículo 50.- El Consejo Consultivo celebrará reuniones con la Mesa Directiva cada seis meses, en base a lo 
+                      mencionado en los artículos 30 y 31. Cuando las circunstancias lo requieran, las reuniones serán tantas y con 
+                      la frecuencia necesaria hasta la solución del problema que las motive. La convocatoria será hecha por el 
+                      Presidente o por cualquiera de los miembros del consejo, por escrito y por medios electrónicos o por vía 
+                      telefónica lo menos con una semana de anticipación.</p><br>
+                    <p>Artículo 51.- Los acuerdos de la sesión serán válidos cuando sean tomados por mayoría de votos de los asistentes o por unanimidad.</p><br>
+                    <p>Artículo 52.- El Consejo Consultivo autorizará la proposición de los candidatos a la Vicepresidencia de acuerdo con el siguiente procedimiento:</p>
+                    <p>a) Recepción por escrito de la Solicitud de los candidatos a la Vicepresidencia cuatro meses antes de la fecha en que se llevarán a cabo las elecciones.</p>
+                    <p>b) Análisis de los Currículums que presenten los candidatos a Vicepresidente.</p>
+                    <p>c) Valoración de las propuestas del candidato a la Vicepresidencia en relación a proyección.</p>
+                    <p>d) El voto de los miembros del Consejo Consultivo para la selección y autorización de candidatos a la Vicepresidencia será por consenso.</p>
+                    <p>e) En caso de no ser aprobada la solicitud de un candidato a la Vicepresidencia, se seguirá con el procedimiento del Artículo 33, inciso k.</p>
+                    <p>f) En los Currículum se podrán considerar de acuerdo con los siguientes incisos:</p>
+                    <p>1. Actividades dentro de la AMMT.
+                      <br>2. Educación de Postgrado
+                      <br>3. Actividades Institucionales        
+                      <br>4. Actividades Docentes
+                      <br>5. Actividades Editoriales
+                      <br>6. Grados Académicos Universitarios
+                      <br>7. Producción Científica en General
+                      <br>8. Demostración de capacidad de liderazgo dentro de su organización y en el campo de la Medicina Transfusional.
+                      <br>9. Pertenencia a Sociedades científicas y Asociaciones afines a la Medicina Transfusional.
+                      <br>10. Cargos directivos en sociedades científicas afines.
+                      <br>11. Puestos directivos en facultades o escuelas de medicin
+                    </p>
+                    <p>*La decisión del Consejo Consultivo será dada a conocer en un plazo no mayor de tres semanas a partir del momento de la convocatoria hecha para este proceso.</p><br><br>
+                    <h4>CAPITULO XII<br>
+                        SOCIEDADES INCORPORADAS</h4><br><br>
+                    <p>Artículo 53.- Se considerarán sociedades incorporadas o a incorporarse los organismos afines a la Medicina Transfusional y que tengan fines semejantes a los de la AMMT.</p><br>
+                    <p>Artículo 54.- Las sociedades incorporadas tendrán directiva, estatutos y reglamentos propios. Los mismos no deberán contravenir los fines y objetivos de la AMMT.</p><br>
+                    <p>Artículo 55.- Las actividades Académicas que las sociedades incorporadas organicen en conjunto con la AMMT o para cuya realización soliciten el aval de la misma, estarán normadas por los estatutos vigentes.</p><br>
+                    <p>Artículo 56.- Para que una sociedad pueda ser incorporada a la AMMT requerirá:</p>
+                    <p>a) Estar constituida por un mínimo de diez personas dedicadas a la Medicina Transfusional.</p>
+                    <p>b) Haber sido fundada mediante un acta constitutiva notarial.</p>
+                    <p>c) Solicitar por escrito su deseo de ser considerada como sociedad incorporada, remitiendo copia del Acta Constitutiva y el reglamento que le regirá.</p>
+                    <p>d) La aceptación por la AMMT se hará constar en el documento respectivo.</p>
+                    <p>e) A partir de su aceptación podrá agregar a su documentación la leyenda: Incorporada a la Asociación Mexicana de Medicina Transfusional, A.C.</p><br>
+                    <p>Artículo 57.- Las relaciones de la Asociación Mexicana de Medicina Transfusional, A.C. y sociedades incorporadas, se regirán dé acuerdo con los siguientes principios:</p>
+                    <p>a) La AMMT promoverá el intercambio científico entre ella y las sociedades incorporadas.</p>
+                    <p>b) La AMMT y las sociedades incorporadas se apoyarán mutuamente en lo concerniente a la Organización de las actividades académicas, culturales y sociales y para el buen desarrollo del Congreso y Asamblea Nacional de la AMMT.</p>
+                    <p>c) De la misma manera, para la realización de las actividades de índole científica organizadas por las sociedades incorporadas relacionadas con la Medicina Transfusional , las mismas contarán con el apoyo y supervisión de la AMMT. Lo anterior en aspectos académicos y de infraestructura.</p><br>
+                    <p>Artículo 58.- Las Mesas Directivas de las sociedades incorporadas podrán fijar cuotas extraordinarias para apoyar sus funciones académicas y administrativas. Dichas cuotas deberán ser aprobadas en Asamblea de cada sociedad, comunicándolo por escrito a la Mesa Directiva de la AMMT.</p><br><br>
+                    <h4>CAPITULO XIII<br>
+                        DE LOS COMITÉS</h4><br><br>
+                    <p>Artículo 59.- Se formarán comités académicos específicos de acuerdo a las inquietudes de los asociados y el Comité de Etica. Lo anterior con la finalidad de ayudar en la solución de problemas académicos, científicos, técnicos, de conflictos y de otra índole que se presenten en su organización y realización.</p><br>
+                    <p>Artículo 60.- Los comités tendrán un Coordinador propuesto por los interesados y aprobado por la Mesa Directiva</p><br>
+                    <p>Artículo 61.- El Comité Etica será integrado por miembros titulares de la AMMT, honorarios, ex presidentes o miembros del Consejo. Su función es de vigilancia. y recepción de conflictos manifestados por escrito y sustentados por las evidencias del mismo por el agraviado, las cuales valorará y canalizará al Consejo Consultivo que decidirá el curso a seguir.</p><br><br>
+                    <h4>CAPITULO XIV<br>
+                        LOGOTIPO Y SOLICITUD DE AVAL</h4><br><br>
+                    <p>Del uso del logotipo de la Asociación:</p>
+                    <p>Artículo 62.-El logotipo de la Asociación, cuando se utilice en forma impresa, siempre deberá llevar los siguientes colores:</p>
+                    <p>Gota.- en rojo haciendo la ilusión de tercera dimensión
+                      <br>Mapa de la República.-en negro
+                      <br>Letras AMMT.- en blanco
+                      <br>El logotipo siempre conservará las mismas proporciones de ancho y largo (cuadrado exterior).
+                    </p>
+                    <p>De la solicitud de aval de la Asociación:</p>
+                    <p>Artículo 63.- la Asociación otorgará el aval que le sea solicitado para cursos, diplomados y otros eventos académicos mediante el proceso siguiente:</p>
+                    <p>a)La institución que solicite el aval deberá enviar a la Asociación una solicitud acompañada por el programa académico propuesto, así como el costo del mismo.</p>
+                    <p>b)La mesa directiva en funciones, a través de su vocal de actividades académicas analizará el programa académico del evento en cuestión, lo aprobará, si es este el caso y/o hará las recomendaciones pertinentes.</p>
+                    <p>c)La mesa directiva en funciones aprobará, si así lo considera, el otorgamiento del aval y enviará el logotipo de la Asociación e instrucciones del uso del mismo, para que sea empleado exclusivamente, en el evento académico en cuestión</p>
+                    <p>d)En el caso de que el evento académico sea no lucrativo, la Asociación no recibirá pago alguno por el aval, pero cuando sea un evento que signifique ingreso económico, la Asociación deberá recibir hasta 30% de la inscripción que sea cobrada por la institución solicitante del aval.</p>
+                    <p>e)La decisión del otorgamiento, así como cobro del aval siempre estará sometida a la mesa directiva en funciones</p><br><br>
+                    <p>EL PRESENTE REGLAMENTO DEBE SER REVISADO COMO MÍNIMO CADA DOS AÑOS O EN CASO NECESARIO</p>
+                    
+                  </ion-list>
+                </ion-col>
+            </ion-row>
+        </ion-slide>
+        <ion-slide>
+            <ion-row>
+                <ion-col size="12">
+                  <ion-list>
+                    <ion-button (click)="solicitud()">
+                      <h4>Solicitud de Ingreso</h4>
+                    </ion-button>
+                    <ion-button (click)="listado()">
+                      <h4>Listado de miembros</h4>
+                    </ion-button>
+                  </ion-list>
+                </ion-col>
+            </ion-row>
+        </ion-slide>
+      </ion-slides>
 </ion-content>
