@@ -23,11 +23,11 @@ import { DocumentViewer } from '@ionic-native/document-viewer/ngx';
     StatusBar,
     SplashScreen,
     InAppBrowser,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     File,
     FileOpener,
     FileTransfer,
-    DocumentViewer
+    DocumentViewer,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
 })
