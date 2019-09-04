@@ -5,4 +5,10 @@ img{
     border: 1px hidden #ffffff;
 }
 
+:host {
+    ion-content {
+        --padding-top: 13px;
+    }
+}
+
 
