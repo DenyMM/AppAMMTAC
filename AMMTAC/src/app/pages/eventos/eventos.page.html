@@ -1,20 +1,20 @@
 <ion-header>
     <ion-toolbar color="primary">
         <ion-buttons slot="start">
-            <ion-back-button defaultHref=""></ion-back-button>
+            <ion-back-button text="Volver"></ion-back-button>
           </ion-buttons>
       <ion-title>Congresos y Eventos</ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<ion-card  color="primary" routerLink="congresos">
-  <h2>Congresos</h2>
+<ion-card id="bloodOne" (click)="navegarPagina('congresos')">
+  <h2>Congreso de la Asociación Mexicana de Medicina Transfusional, A.C.</h2>
 </ion-card>
-<ion-card  color="primary" routerLink="sesiones">
+<ion-card id="bloodTwo" (click)="navegarPagina('sesiones')">
   <h2>Sesión Academica Mensual</h2>
 </ion-card>
-<ion-card  color="primary" routerLink="cursos">
+<ion-card id="bloodThree" (click)="navegarPagina('cursos')">
     <h2>Cursos</h2>
 </ion-card>
 </ion-content>

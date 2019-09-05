@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar color="primary">
       <ion-buttons slot="start">
-          <ion-back-button defaultHref=""></ion-back-button>
+          <ion-back-button text="Volver"></ion-back-button>
         </ion-buttons>
     <ion-title>Iniciar sesión</ion-title>
   </ion-toolbar>
@@ -12,18 +12,21 @@
 <img id="pic" src="././assets/home/logoconslogan.png" alt="">
 <br>
 <h1>Ingrese sus datos de identificación</h1>
-  <div class="centerId">
-  <h4>Número de membresía:</h4>
+<h4 class="centerId">Número de membresía:</h4>
+  <div text-center class="centerId">
+  
   <ion-input type="number" placeholder="123341312"></ion-input>
   </div>
-  <div class="centerId">
-  <h4>Contraseña:</h4>
+  <h4 class="centerId">Contraseña:</h4>
+  <div text-center class="centerId">
+  
   <ion-input type="password" placeholder="*******"></ion-input>
   </div>
   <br>
-  <ion-buttons class="centerId">
+  <div text-center>
+  <ion-buttons class="centerId" (click)="navegar('http://www.ammtac.org/espanol/RegistroAsociado.asp?Accion=RecordarPassword&Referer=')">
       <p color="primary">Deseo recordar mi contraseña</p>
-  </ion-buttons>
+  </ion-buttons></div>
    
 
 </ion-content>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-donacion',
@@ -8,7 +9,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 })
 export class DonacionPage {
 
-  constructor(private iab: InAppBrowser) { }
+  constructor(private iab: InAppBrowser, public navCtrl: NavController) { }
 
   directorio() {
     this.iab.create('http://www.ammtac.org/espanol/DirectorioBS.asp', '_system');
@@ -22,6 +23,14 @@ export class DonacionPage {
     this.iab.create('https://www.youtube.com/watch?v=X6WEMPTHHEc&feature=youtu.be', '_system');
   }
 
+  navegar(ruta: string) {
+    this.iab.create(ruta, '_system');
+  }
+
+
+  async navegarPagina(pagina: any) {
+    this.navCtrl.navigateForward('/tabs/tab2/donacion/' + pagina);
+  }
 
 
 }

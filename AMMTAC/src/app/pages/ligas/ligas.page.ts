@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { NavController } from '@ionic/angular';
 
 
 
@@ -10,7 +11,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 })
 export class LigasPage  {
 
-  constructor(private iab: InAppBrowser) { }
+  constructor(private iab: InAppBrowser, public navCtrl: NavController) { }
 
   videos() {
     this.iab.create('https://ipfa.nl/proceedings', '_blank');
@@ -31,5 +32,11 @@ export class LigasPage  {
   noticias() {
     this.iab.create('https://www.scidev.net/america-latina/gobernanza/noticias/nature-revisa-en-profundidad-la-ciencia-sudamericana.html', '_blank');
   }
+
+  navegar(ruta: string) {
+    this.iab.create(ruta, '_system');
+  }
+
+  
 
 }

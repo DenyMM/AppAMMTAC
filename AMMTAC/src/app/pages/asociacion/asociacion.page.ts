@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonSlides } from '@ionic/angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-asociacion',
@@ -13,7 +14,7 @@ export class AsociacionPage  implements OnInit {
 
   segment = 0;
 
-  constructor(private iab: InAppBrowser) { }
+  constructor(private iab: InAppBrowser, public navCtrl: NavController) { }
 
   ngOnInit() {
   }
@@ -31,6 +32,10 @@ export class AsociacionPage  implements OnInit {
   }
   listado() {
     this.iab.create('http://www.ammtac.org/espanol/ListadoSociosActivos.asp?fkTipoArticulo=3', '_system');
+  }
+
+  navegar(ruta: string) {
+    this.iab.create(ruta, '_system');
   }
 
 

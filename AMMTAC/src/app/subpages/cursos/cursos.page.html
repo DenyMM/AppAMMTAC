@@ -1,7 +1,7 @@
 <ion-header>
     <ion-toolbar color="primary">
         <ion-buttons slot="start">
-            <ion-back-button defaultHref=""></ion-back-button>
+            <ion-back-button text="Volver"></ion-back-button>
           </ion-buttons>
       <ion-title>Cursos</ion-title>
     </ion-toolbar>
@@ -16,12 +16,12 @@
       <br>Con relación a los cursos vía on line en el  Hemocentro de Buenos Aires, les transmito reciente información recibida sobre un descuento del 15% en el costo de los mismos. Esta iniciativa fue propuesta en el Aula de Medicina, para los socios de AAHI y se hizo extensiva a los socios de GCIAMT.
       Importante iniciativa para fomentar la participación de todos los profesionales  en nuestra región.
       <br>Recibimos la información por parte de la Dra. Blejer.</p>
-      <ion-row>
+      <ion-row text-center>
         <ion-col size="6">
-            <ion-button expand="full" (click)="linkOne()">link 1</ion-button>
+            <ion-button class="btn" size="large" (click)="navegar('http://www.aulademedicina.com.ar/detalle_curso.php?id_cursos=94')">link 1</ion-button>
         </ion-col>
         <ion-col size="6">
-            <ion-button expand="full" (click)="linkTwo()">link 2</ion-button>
+            <ion-button class="btn" size="large" (click)="navegar('http://www.aulademedicina.com.ar/detalle_curso.php?id_cursos=93')">link 2</ion-button>
         </ion-col>
       </ion-row>
 </ion-card>
@@ -36,7 +36,8 @@
     <br>Los Diplomados son Presenciales y se imparte en las oficinas de la Asociación 
     ubicadas en Petén 418 (Entre Av. Eugenia y San Borja), Colonia Vértiz Narvarte, 
     alcaldía Benito Juárez. CP. 03600, Ciudad de México. </p>
-    <ion-button expand="full" (click)="mapaCurso()">Ver mapa de ubicación</ion-button>
+    <div text-center >
+    <ion-button class="btn" size="large" (click)="navegar('https://www.google.com.mx/maps/place/Pet%C3%A9n+418,+Vertiz+Narvarte,+03600+V%C3%A9rtz+Narvarte,+D.F./@19.38338,-99.1538092,18z/data=!4m2!3m1!1s0x85d1ffa9b363e239:0x361eacca9335ac4d')">Ver mapa de ubicación</ion-button></div>
     <img id="pic" src="././assets/eventos/Diplomado_Aferesis.jpg" alt="">
     <img id="pic" src="././assets/eventos/costos_MT.png" alt="">
 </ion-card>

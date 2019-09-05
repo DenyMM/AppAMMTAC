@@ -1,26 +1,26 @@
 <ion-header>
     <ion-toolbar color="primary">
         <ion-buttons slot="start">
-            <ion-back-button defaultHref=""></ion-back-button>
+            <ion-back-button text="Volver"></ion-back-button>
           </ion-buttons>
       <ion-title>Ligas de Interés</ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-card  color="primary" (click)="videos()">
+    <ion-card  id="bloodOne" (click)="navegar('https://ipfa.nl/proceedings')">
         <h2>Vídeos de Interés</h2>
       </ion-card>
-      <ion-card  color="primary" (click)="sangre()">
+      <ion-card  id="bloodTwo" (click)="navegar('http://www.ipfa.nl/events/ipfa-bca-global-symposium-on-the-future-for-blood-and-plasma-donations')">
         <h2>Asociación Internacional de Fraccionamiento de la sangre</h2>
       </ion-card>
-      <ion-card  color="primary" (click)="GCIAMT()"> 
+      <ion-card  id="bloodThree" (click)="navegar('http://www.gciamt.org/')"> 
         <h2>Página web de GCIAMT</h2>
       </ion-card>
-      <ion-card  color="primary" (click)="terapia()">
+      <ion-card  id="bloodFour" (click)="navegar('http://sets.es/')">
         <h2>Sociedad Española de Transfusión Sanguínea y Terapia Celular</h2>
       </ion-card>
-      <ion-card  color="primary" (click)="noticias()">
+      <ion-card  id="bloodFive" (click)="navegar('https://www.scidev.net/america-latina/gobernanza/noticias/nature-revisa-en-profundidad-la-ciencia-sudamericana.html')">
         <h2>Acercar la Ciencia al Desarrollo mediente Noticias y Análisis</h2>
       </ion-card>
 </ion-content>

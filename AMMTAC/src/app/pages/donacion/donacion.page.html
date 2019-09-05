@@ -1,23 +1,23 @@
 <ion-header>
     <ion-toolbar color="primary">
         <ion-buttons slot="start">
-            <ion-back-button defaultHref=""></ion-back-button>
+            <ion-back-button text="Volver"></ion-back-button>
           </ion-buttons>
       <ion-title>Donación</ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<ion-item id="bloodOne" routerLink="requisitos">
-    <h2>Requisitos Generales para Donar Sangre</h2>
-</ion-item>
-<ion-item id="bloodTwo" (click)="directorio()">
-    <h2>Directorio de Bancos de Sangre</h2>
-</ion-item>
-<ion-item id="bloodThree" (click)="altruista()">
-    <h2>Donación Altruista en México</h2>
-</ion-item>
-<ion-item id="bloodFour" (click)="video()">
-    <h2>Video: ¿Qué es la Sangre?</h2>
-</ion-item>
+<ion-card id="bloodOne" size="large" (click)="navegarPagina('requisitos')">
+    Requisitos Generales para Donar Sangre
+</ion-card>
+<ion-card id="bloodTwo" size="large" (click)="navegar('http://www.ammtac.org/espanol/DirectorioBS.asp')">
+    Directorio de Bancos de Sangre
+</ion-card>
+<ion-card id="bloodThree" size="large" (click)="navegar('http://www.ammtac.org/espanol/page.asp?Accion=VerRegistro&fkPage=268&NombreABC=&BuscarfkPromocion=&BuscarEsNovedad=&BuscarEsRecomendacion=&Keywords=&NoPagina= ')">
+    Donación Altruista en México
+</ion-card>
+<ion-card id="bloodFour" size="large" (click)="navegar('https://www.youtube.com/watch?v=X6WEMPTHHEc&feature=youtu.be')">
+    Video: ¿Qué es la Sangre?
+</ion-card>
 </ion-content>

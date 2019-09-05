@@ -1,9 +1,9 @@
 <ion-header>
     <ion-toolbar color="primary">
         <ion-buttons slot="start">
-            <ion-back-button defaultHref=""></ion-back-button>
+            <ion-back-button text="Volver"></ion-back-button>
           </ion-buttons>
-      <ion-title>Congresos</ion-title>
+      <ion-title>Congreso</ion-title>
     </ion-toolbar>
 </ion-header>
 
@@ -14,24 +14,23 @@
  <ion-card>
     <img id="pic" src="././assets/eventos/inscripciones_2019.png" alt="">
  </ion-card>
- <ion-button expand="full" (click)="inscripcion()">
+ <div text-center>
+ <ion-button  class="bubble " size="large" (click)="navegar('https://www.intermeetingplanner.com/regammtac/index.php?id=nuevo')">
     Inscripciones
    </ion-button>
+</div>
  <ion-card>
     <img id="pic" src="././assets/eventos/Tarifas_2019.png" alt="">
  </ion-card>
 
- <ion-row>
-   <ion-col size="2"></ion-col>
-   <ion-col size="8">
-     <ion-button expand="full" (click)="openLocalPdf()">
-        <h4>Ver Programa</h4>
+ <ion-row text-center>
+   <ion-col size="1"></ion-col>
+   <ion-col size="10">
+     <ion-button class="bubble" size="large" (click)="openLocalPdf()">
+        Ver Programa
      </ion-button>
-     <ion-button expand="full" (click)="downloadAndOpenPdf()">
-         <h4>Descargar Programa</h4>
-      </ion-button>
    </ion-col>
-   <ion-col size="2"></ion-col>
+   <ion-col size="1"></ion-col>
  </ion-row>
 
 </ion-content>

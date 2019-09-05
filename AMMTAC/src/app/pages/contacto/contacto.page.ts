@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { NavController } from '@ionic/angular';
 
 
 @Component({
@@ -9,10 +10,13 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 })
 export class ContactoPage  {
 
-  constructor(private iab: InAppBrowser) { }
+  constructor(private iab: InAppBrowser, public navCtrl: NavController) { }
 
   fbAMMTAC (){
     this.iab.create('https://www.facebook.com/ammtransfusional/', '_system');
   }
 
+  navegar(ruta: string) {
+    this.iab.create(ruta, '_system');
+  }
 }

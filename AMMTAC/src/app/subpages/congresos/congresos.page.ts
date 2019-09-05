@@ -5,6 +5,7 @@ import { Platform } from '@ionic/angular';
 import { File } from '@ionic-native/File/ngx';
 import { FileOpener } from '@ionic-native/file-opener/ngx';
 import { FileTransfer } from '@ionic-native/file-transfer/ngx';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-congresos',
@@ -19,7 +20,8 @@ export class CongresosPage {
               private platform: Platform,
               private fileOpener: FileOpener,
               // tslint:disable-next-line: deprecation
-              private ft: FileTransfer) { }
+              private ft: FileTransfer,
+              public navCtrl: NavController) { }
 
   inscripcion() {
     this.iab.create('https://www.intermeetingplanner.com/regammtac/index.php?id=nuevo', '_system');
@@ -61,7 +63,11 @@ export class CongresosPage {
 					.catch(e => console.log('Error opening file', e));
 			}
 		});
-	}
+  }
+  
+  navegar(ruta: string) {
+    this.iab.create(ruta, '_system');
+  }
 
 
 
